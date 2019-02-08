@@ -21,7 +21,7 @@ class _FriendsListPageState extends State<FriendsListPage> {
 
   Future<void> _loadFriends() async {
     http.Response response =
-        await http.get('https://randomuser.me/api/?results=25');
+        await http.get('https://randomuser.me/api/?results=10');
 
     setState(() {
       _friends = Friend.allFromResponse(response.body);
@@ -70,7 +70,7 @@ class _FriendsListPageState extends State<FriendsListPage> {
     }
 
     return new Scaffold(
-      appBar: new AppBar(title: new Text('Friends')),
+      appBar: new AppBar(title: new Text('Cafeteros')),
       body: content,
     );
   }
